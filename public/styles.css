@@ -33,7 +33,7 @@
   --text: #0b1220;
   --muted: #55617a;
   --faint: #8a93a8;
-  --footer-bg: #0b0f1a;
+  --footer-bg: #eef2fb;
   --shadow: 0 30px 70px -34px rgba(20,30,60,.35);
 }
 
@@ -437,7 +437,7 @@ section { position: relative; z-index: 1; }
 .dl-card .hero-cta { justify-content: center; }
 
 /* ===== FOOTER (legible both themes) ===== */
-.footer { background: var(--footer-bg); color: #eaf0fb; margin-top: 40px; }
+.footer { position: relative; z-index: 1; background: var(--footer-bg); color: #eaf0fb; margin-top: 40px; }
 .foot-inner {
   max-width: var(--maxw); margin: 0 auto; padding: 50px 22px 26px; display: flex; justify-content: space-between;
   gap: 30px; flex-wrap: wrap;
@@ -453,6 +453,14 @@ section { position: relative; z-index: 1; }
   max-width: var(--maxw); margin: 0 auto; padding: 18px 22px; display: flex; justify-content: space-between; gap: 12px;
   flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.09); font-size: 13px; color: #97a3bd;
 }
+
+/* footer legible in light theme */
+:root[data-theme="light"] .footer { color: #2a3550; border-top: 1px solid rgba(12,18,35,.08); }
+:root[data-theme="light"] .foot-logo { color: #0b1220; }
+:root[data-theme="light"] .foot-tag { color: #55617a; }
+:root[data-theme="light"] .foot-link { color: #55617a; }
+:root[data-theme="light"] .foot-link:hover { color: #0b1220; }
+:root[data-theme="light"] .foot-bottom { color: #6b7488; border-top-color: rgba(12,18,35,.12); }
 
 /* ===== reveal (motion) ===== */
 .reveal { opacity: 0; transform: translateY(26px); }
